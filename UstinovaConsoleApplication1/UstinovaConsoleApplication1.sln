@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UstinovaConsoleApplication1", "UstinovaConsoleApplication1\UstinovaConsoleApplication1.vcxproj", "{B4AA6D7F-42F7-4948-B042-D097F3953CFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4AA6D7F-42F7-4948-B042-D097F3953CFE}.Debug|x64.ActiveCfg = Debug|x64
+		{B4AA6D7F-42F7-4948-B042-D097F3953CFE}.Debug|x64.Build.0 = Debug|x64
+		{B4AA6D7F-42F7-4948-B042-D097F3953CFE}.Debug|x86.ActiveCfg = Debug|Win32
+		{B4AA6D7F-42F7-4948-B042-D097F3953CFE}.Debug|x86.Build.0 = Debug|Win32
+		{B4AA6D7F-42F7-4948-B042-D097F3953CFE}.Release|x64.ActiveCfg = Release|x64
+		{B4AA6D7F-42F7-4948-B042-D097F3953CFE}.Release|x64.Build.0 = Release|x64
+		{B4AA6D7F-42F7-4948-B042-D097F3953CFE}.Release|x86.ActiveCfg = Release|Win32
+		{B4AA6D7F-42F7-4948-B042-D097F3953CFE}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {943A4037-F475-4FBA-A951-F02DBD8DCB2D}
+	EndGlobalSection
+EndGlobal

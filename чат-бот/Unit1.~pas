@@ -1,0 +1,89 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Memo: TMemo;
+    btn1: TButton;
+    procedure btn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+  t:Integer=0;
+  a:array[1..7] of string;
+  s:Integer;
+  k:integer=1;
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btn1Click(Sender: TObject);
+begin
+  t:=t+1;
+  k:=k+2;
+  if t=1 then begin
+  k:=0;
+  Memo.Lines.Add('Добрый день! Чем могу помочь?');
+  end;
+  if(t=2) and (Memo.Lines[k]='Запиши планы на день') then
+  begin
+    s:=1;
+    Memo.Lines.Add('На какой день?');
+  end;
+
+  if (s=1)and(t=3) then Memo.Lines.Add('Записываю!');
+
+  if (s=1) and (t=4) then begin
+    if (Memo.Lines[k-2]='Понедельник') then a[1]:=Memo.Lines[k];
+    if (Memo.Lines[k-2]='Вторник') then a[2]:=Memo.Lines[k];
+    if (Memo.Lines[k-2]='Среда') then a[3]:=Memo.Lines[k];
+    if (Memo.Lines[k-2]='Четверг') then a[4]:=Memo.Lines[k];
+    if (Memo.Lines[k-2]='Пятница') then a[5]:=Memo.Lines[k];
+    if (Memo.Lines[k-2]='Суббота') then a[6]:=Memo.Lines[k];
+    if (Memo.Lines[k-2]='Воскресенье') then a[7]:=Memo.Lines[k];
+
+  end;
+  if (s=1) and (t=4) then
+  begin
+  Memo.Lines.Add('Записала! Что-нибудь ещё?') ;
+    t:=1;
+   end;
+  if(t=2) and (Memo.Lines[k]='Напомни мне о планах') then
+  begin
+   s:=2;
+   Memo.Lines.Add('В какой день?');
+  end;
+  if (s=2) and (t=3) then
+  begin
+    if (Memo.Lines[k]='Понедельник') then if a[1]='' then Memo.Lines.Add('На этот день нет планов!') else Memo.Lines.Add(a[1]);
+    if (Memo.Lines[k]='Вторник') then if a[1]='' then Memo.Lines.Add('На этот день нет планов!') else Memo.Lines.Add(a[2]);
+    if (Memo.Lines[k]='Среда') then if a[1]='' then Memo.Lines.Add('На этот день нет планов!') else Memo.Lines.Add(a[3]);
+    if (Memo.Lines[k]='Четверг') then if a[1]='' then Memo.Lines.Add('На этот день нет планов!') else Memo.Lines.Add(a[4]);
+    if (Memo.Lines[k]='Пятница') then if a[1]='' then Memo.Lines.Add('На этот день нет планов!') else Memo.Lines.Add(a[5]);
+    if (Memo.Lines[k]='Суббота') then if a[1]='' then Memo.Lines.Add('На этот день нет планов!') else Memo.Lines.Add(a[6]);
+    if (Memo.Lines[k]='Воскресенье') then if a[1]='' then Memo.Lines.Add('На этот день нет планов!') else Memo.Lines.Add(a[7]);
+  k:=k+1;
+  Memo.Lines.Add('Что-нибудь ещё?') ;
+  t:=1;
+  end;
+  if(t=2) and (Memo.Lines[k]='Давай поболтаем') then
+  begin
+    s:=3;
+    Memo.Lines.Add('Как у вас дела?');
+  end;
+  if (s=3) and (t=3) and (Memo.Lines[k]='Плохо') then  begin
+  Memo.Lines.Add('Жизнь иногда преподносит нам неприятные сюрпризы, но важно всегда оставаться сильной.'+#13+ 'Попробуйте отдохнуть от работы, позаниматься чем-нибудь приятным, для души.' +#13+'Поверьте, скоро всё наладится! Главное - не опускать руки.');
+  k:=k+2;
+  end;
+end;
+end.
